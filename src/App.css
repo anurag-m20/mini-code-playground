@@ -1,0 +1,822 @@
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+  color: #e5e7eb;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  height: 60px;
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  background: #111827;
+  border-bottom: 1px solid #374151;
+}
+
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo-symbol {
+  color: #3b82f6;
+  font-family: Consolas, monospace;
+  font-weight: bold;
+}
+
+
+/* HEADER BUTTONS */
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.header-actions button {
+  border: none;
+  padding: 8px 16px;
+
+  border-radius: 6px;
+
+  background: #2563eb;
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.header-actions button:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================
+   MAIN WORKSPACE
+========================================= */
+
+.workspace {
+  flex: 1;
+
+  display: flex;
+
+  min-height: 0;
+}
+
+
+/* =========================================
+   EDITOR PANEL
+========================================= */
+
+.editor-panel {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #0f172a;
+
+  border-right: 1px solid #374151;
+
+  min-width: 0;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.tabs {
+  height: 44px;
+  min-height: 44px;
+
+  display: flex;
+
+  background: #1f2937;
+
+  border-bottom: 1px solid #374151;
+}
+
+.tabs button {
+  height: 100%;
+
+  padding: 0 20px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #9ca3af;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.tabs button:hover {
+  background: #374151;
+  color: white;
+}
+
+.tabs button.active {
+  color: white;
+
+  background: #111827;
+
+  border-bottom: 2px solid #3b82f6;
+}
+
+
+/* =========================================
+   EDITOR HEADER
+========================================= */
+
+.editor-header {
+  height: 36px;
+  min-height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px;
+
+  background: #111827;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+
+  border-bottom: 1px solid #374151;
+}
+
+.language {
+  color: #64748b;
+}
+
+
+/* =========================================
+   CODE EDITOR
+========================================= */
+
+.code-editor {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 20px;
+
+  resize: none;
+
+  outline: none;
+
+  border: none;
+
+  background: #0f172a;
+
+  color: #e5e7eb;
+
+  font-family: Consolas, "Courier New", monospace;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  tab-size: 2;
+}
+
+.code-editor::selection {
+  background: #1d4ed8;
+}
+
+.code-editor:focus {
+  outline: none;
+}
+
+
+/* =========================================
+   PREVIEW PANEL
+========================================= */
+
+.preview-panel {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+
+  min-width: 0;
+}
+
+
+/* =========================================
+   PANEL HEADER
+========================================= */
+
+.panel-header {
+  height: 44px;
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px;
+
+  background: #1f2937;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+.status {
+  color: #22c55e;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   PREVIEW CONTAINER
+========================================= */
+
+.preview-container {
+  flex: 1;
+
+  width: 100%;
+
+  background: white;
+
+  overflow: hidden;
+}
+
+.preview-frame {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+
+  background: white;
+}
+
+
+/* =========================================
+   CONSOLE
+========================================= */
+
+.console-panel {
+  height: 190px;
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #020617;
+
+  border-top: 1px solid #374151;
+}
+
+
+/* =========================================
+   CONSOLE HEADER
+========================================= */
+
+.console-header {
+  height: 40px;
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px;
+
+  background: #111827;
+
+  border-bottom: 1px solid #374151;
+
+  font-size: 14px;
+}
+
+.console-header > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.console-count {
+  min-width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #374151;
+
+  color: #d1d5db;
+
+  font-size: 11px;
+}
+
+
+/* CONSOLE CLEAR BUTTON */
+
+.console-header button {
+  border: none;
+
+  background: transparent;
+
+  color: #9ca3af;
+
+  cursor: pointer;
+
+  font-size: 12px;
+}
+
+.console-header button:hover {
+  color: white;
+}
+
+
+/* =========================================
+   CONSOLE CONTENT
+========================================= */
+
+.console-content {
+  flex: 1;
+
+  padding: 12px 15px;
+
+  overflow-y: auto;
+
+  font-family: Consolas, "Courier New", monospace;
+
+  font-size: 13px;
+}
+
+
+/* EMPTY CONSOLE */
+
+.empty-console {
+  color: #64748b;
+}
+
+
+/* CONSOLE MESSAGE */
+
+.console-message {
+  display: flex;
+
+  gap: 10px;
+
+  padding: 5px 0;
+
+  color: #d1d5db;
+
+  border-bottom: 1px solid #1e293b;
+}
+
+.console-arrow {
+  color: #22c55e;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.code-editor::-webkit-scrollbar,
+.console-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.code-editor::-webkit-scrollbar-track,
+.console-content::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.code-editor::-webkit-scrollbar-thumb,
+.console-content::-webkit-scrollbar-thumb {
+  background: #374151;
+
+  border-radius: 4px;
+}
+
+.code-editor::-webkit-scrollbar-thumb:hover,
+.console-content::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .workspace {
+    flex-direction: column;
+  }
+
+  .editor-panel,
+  .preview-panel {
+    width: 100%;
+    height: 50%;
+  }
+
+  .editor-panel {
+    border-right: none;
+
+    border-bottom: 1px solid #374151;
+  }
+
+  .console-panel {
+    height: 150px;
+    min-height: 150px;
+  }
+
+}
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HTML / BODY
+========================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #0f172a;
+
+  color: #e5e7eb;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+textarea {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.console-message.log {
+  color: #e5e7eb;
+}
+
+.console-message.info {
+  color: #60a5fa;
+}
+
+.console-message.warn {
+  color: #facc15;
+}
+
+.console-message.error {
+  color: #f87171;
+}
+
+.console-message .console-arrow {
+  margin-right: 8px;
+  font-weight: bold;
+}
+.console-message-content {
+  display: inline;
+}
+
+.console-object {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.console-object summary {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.console-object pre {
+  margin: 6px 0 0 18px;
+  padding: 8px;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+.save-status {
+  font-size: 14px;
+  color: #22c55e;
+  margin-right: 10px;
+}
+.console-time {
+  font-size: 12px;
+  color: #888;
+  margin-right: 10px;
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+  .workspace {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .editor-panel,
+  .preview-panel {
+    min-height: 400px;
+  }
+
+  .console-panel {
+    min-height: 300px;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .header-actions {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* ============================= */
+/* SMALL SCREENS */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+  .header {
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .header-actions button {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .save-status {
+    font-size: 12px;
+  }
+
+  .tabs button {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .editor-panel,
+  .preview-panel {
+    min-height: 350px;
+  }
+
+  .console-panel {
+    min-height: 250px;
+  }
+
+  .console-content {
+    font-size: 12px;
+  }
+}
+/* ============================= */
+/* BUTTON HOVER & FOCUS */
+/* ============================= */
+
+.header-actions button,
+.console-header button {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.header-actions button:hover,
+.console-header button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.header-actions button:active,
+.console-header button:active {
+  transform: translateY(0);
+}
+
+.header-actions button:focus-visible,
+.console-header button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+
+/* ============================= */
+/* HEADER SPACING */
+/* ============================= */
+
+.header-actions {
+  gap: 10px;
+}
+
+.header-actions button {
+  border-radius: 6px;
+}
+/* ============================= */
+/* CONSOLE SCROLLBAR */
+/* ============================= */
+
+.console-content {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #1e1e1e;
+}
+
+.console-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.console-content::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.console-content::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+.console-content::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+
+/* ============================= */
+/* CONSOLE MESSAGE POLISH */
+/* ============================= */
+
+.console-message {
+  padding: 8px 10px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.console-message:hover {
+  background: #242424;
+}
+
+.console-message-content {
+  word-break: break-word;
+}
+
+.console-object {
+  margin-top: 5px;
+}
+
+.console-object summary {
+  cursor: pointer;
+  color: #60a5fa;
+}
+
+.console-object pre {
+  margin-top: 6px;
+  padding: 8px;
+  background: #181818;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+/* ============================= */
+/* FINAL UI CLEANUP */
+/* ============================= */
+
+.workspace {
+  gap: 12px;
+}
+
+.editor-panel,
+.preview-panel,
+.console-panel {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.panel-header,
+.editor-header,
+.console-header {
+  min-height: 42px;
+}
+
+.code-editor {
+  line-height: 1.6;
+  tab-size: 2;
+  outline: none;
+}
+
+.code-editor:focus {
+  box-shadow: inset 0 0 0 1px #2563eb;
+}
+
+.preview-frame {
+  border: none;
+  background: white;
+}
+
+.empty-console {
+  opacity: 0.7;
+  padding: 12px;
+}
+
+
+/* ============================= */
+/* BETTER TEXT SELECTION */
+/* ============================= */
+
+.code-editor::selection {
+  background: #2563eb;
+  color: white;
+}
+
+
+/* ============================= */
+/* SMOOTH UI */
+/* ============================= */
+
+button,
+textarea,
+iframe {
+  transition: all 0.2s ease;
+}
